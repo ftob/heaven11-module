@@ -1,13 +1,10 @@
 <?php
 namespace Heaven11\Client;
 
-use AdIntelligence\Client\Models\Task;
-use AdIntelligence\Client\Repositories\Contracts\RepositoryInterface;
-use AdIntelligence\Client\Repositories\EloquentRepository;
-use AdIntelligence\Client\Services\ClientService;
-use AdIntelligence\Client\Services\Contracts\RequesterInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
+use Heaven11\Client\Services\ClientService;
+use Heaven11\Client\Services\Contracts\RequesterInterface;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
 /**
