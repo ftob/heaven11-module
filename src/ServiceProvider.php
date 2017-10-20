@@ -39,12 +39,9 @@ class ServiceProvider extends LaravelServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/Resources/config/parameters.php' => config_path('adintelelligence.php'),
+            __DIR__.'/Resources/config/parameters.php' => config_path('heaven11.php'),
         ]);
 
-        $this->publishes([
-            __DIR__ . '/migrations' => database_path('/migrations')
-        ], 'migrations');
 
     }
 }
