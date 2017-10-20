@@ -2,22 +2,19 @@
 namespace Heaven11\Client\Services;
 
 
-use AdIntelligence\Client\Repositories\Contracts\RepositoryInterface;
-use AdIntelligence\Client\Services\Contracts\RequesterInterface;
+
 use GuzzleHttp\ClientInterface;
-use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Promise\PromiseInterface;
+
 use Heaven11\Client\Exceptions\HeavenServerException;
-use Illuminate\Contracts\Filesystem\Filesystem;
-use PHPUnit\Runner\Exception;
-use Psr\Http\Message\ResponseInterface;
+use Heaven11\Client\Services\Contracts\RequesterInterface;
+
 use Psr\Http\Message\UriInterface;
 
 /**
  * Class ClientService
  * @package AdIntelligence\Client\Services
  */
-class ClientService
+class ClientService implements RequesterInterface
 {
 
     /** @var ClientInterface  */
