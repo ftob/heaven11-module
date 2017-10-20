@@ -3,6 +3,7 @@ namespace Heaven11\Client;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Psr7\Uri;
 use Heaven11\Client\Services\ClientService;
 use Heaven11\Client\Services\Contracts\RequesterInterface;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
@@ -28,7 +29,7 @@ class ServiceProvider extends LaravelServiceProvider
         $this->app->bind(RequesterInterface::class, function($app) {
             return new ClientService(
                 $this->app->make(ClientInterface::class),
-                config('heaven11.server')
+                new Uri(config('heaven11.server'))
             );
         });
     }
