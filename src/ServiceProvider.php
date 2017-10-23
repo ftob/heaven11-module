@@ -29,7 +29,7 @@ class ServiceProvider extends LaravelServiceProvider
         $this->app->bind(RequesterInterface::class, function($app) {
             return new ClientService(
                 $this->app->make(ClientInterface::class),
-                new Uri(config('heaven11.server'))
+                new Uri(config('heaven11.server', 'server'))
             );
         });
     }
